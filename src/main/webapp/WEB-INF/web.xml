@@ -29,24 +29,39 @@
   </context-param>
   
   
-  <!--  maping  -->
+<!--  1) servlet declaration   -->
  <servlet>
     <servlet-name>Home</servlet-name>
     <servlet-class>com.ssn.web.Home</servlet-class>
     
-    <init-param>
-      <param-name>Greetings</param-name>
-      <param-value>Hello every one I am doing grate</param-value>
-    </init-param>
-    
-    
-  </servlet>
-  
+      <init-param>
+         <param-name>Greetings</param-name>
+         <param-value>Hello</param-value>
+     </init-param>
+     
+ </servlet>
+ 
+
+<!--  2) servlate maping   -->
   <servlet-mapping>
     <servlet-name>Home</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/home</url-pattern>
   </servlet-mapping>
   
   
+  
+  
+  
+ <servlet>
+    <servlet-name>servlettwo</servlet-name>
+    <servlet-class>com.ssn.web.AnnotationServlet</servlet-class>
+ </servlet>
+  
+  
+  
+    <servlet-mapping>
+    <servlet-name>servlettwo</servlet-name>
+    <url-pattern>/two</url-pattern>
+  </servlet-mapping>
   
 </web-app>
