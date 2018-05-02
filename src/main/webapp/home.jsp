@@ -11,6 +11,6 @@
 <h1>welcome home</h1>
 <h2>${username}</h2>
 <h2>${password}</h2>
-<%@include file="userloginform.jsp" %>
+
 </body>
 </html>

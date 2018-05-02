@@ -7,13 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/")
-public class DefaultServlet extends HttpServlet {
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
-    public DefaultServlet() {
+ 
+    public LoginServlet() {
         super();
        
     }
@@ -21,13 +23,16 @@ public class DefaultServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	
-		request.getRequestDispatcher("home.jsp").forward(request, response);
+		request.getRequestDispatcher("login.jsp").forward(request, response);
 	}
 
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
+
+		System.out.println(request.getParameter("username"));
+		System.out.println(request.getParameter("password"));
+		//request.setAttribute("username", request.getParameter("username"));
+		//request.setAttribute("password", request.getParameter("password"));
 	}
 
 }
