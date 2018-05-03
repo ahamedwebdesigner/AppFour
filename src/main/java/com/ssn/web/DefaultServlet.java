@@ -20,14 +20,12 @@ public class DefaultServlet extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//TODO: add title variable
 		
-	
-		request.getRequestDispatcher("home.jsp").forward(request, response);
+		request.setAttribute("AppName", "SSD");
+		request.setAttribute("pageName", "pages/home.jsp");
+		request.getRequestDispatcher("layout.jsp").forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
-	}
 
 }
