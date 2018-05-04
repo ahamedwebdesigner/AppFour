@@ -30,6 +30,7 @@
 	            <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
 	            <li role="presentation"><a href="${pageContext.request.contextPath}/login">Login</a></li>
 	            <li role="presentation"><a href="${pageContext.request.contextPath}/register">Register</a></li>
+	            <li role="presentation"><a href="${pageContext.request.contextPath}/Users">Users</a></li>
 	          </ul>
 	        </nav>
 	        <h1 class="text-muted">${AppName}</h1>
