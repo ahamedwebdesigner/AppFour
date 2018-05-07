@@ -101,13 +101,14 @@ public class UserDao {
 	    
 	    public int deleteUser(String userId) {
 	    	
+	    	System.out.println("User Id " + userId);
 	        try {
 	            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM user WHERE username = ?");
-	            // Parameters start with 1
-	            preparedStatement.setString(1, userId);
-	            
+	            System.out.println("Prepared Statement before bind variables set:\n\t" + preparedStatement.toString());
+	            	preparedStatement.setString(1, userId);
+	            System.out.println("Prepared Statement after bind variables set:\n\t" + preparedStatement.toString());
 	            int res = preparedStatement.executeUpdate();
-	
+	            //connection.commit();
 	            return res;
 	        } catch (SQLException e) {
 	            e.printStackTrace();

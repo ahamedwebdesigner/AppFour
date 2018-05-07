@@ -51,7 +51,9 @@ public class UsersCtrl extends HttpServlet {
 			
 			
 		}else if (action.equalsIgnoreCase("delete")) {
-			String userID = request.getParameter("userID");
+			String userID = request.getParameter("userId");
+			System.out.println("Delte called with request param : "+ userID);
+			
 			User user = dao.getUserById(userID);
 			 request.setAttribute("user", user);
 			 int res = dao.deleteUser(userID);

@@ -27,3 +27,5 @@ UNIQUE KEY `username` ( `username` )
 show tables;
 
 select * from user;
+
+DELETE FROM user WHERE username ='olslsl';
